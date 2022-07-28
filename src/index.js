@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import SeasonDisplay from './components/SeasonDisplay';
+import Spinner from './components/Spinner';
 
 const el = document.getElementById('root');
 const root = ReactDOM.createRoot(el);
@@ -28,7 +29,7 @@ class App extends React.Component {
       return <SeasonDisplay lat={this.state.lat} />;
     }
 
-    return <div>Loading...</div>;
+    return <Spinner />;
   }
 }
 
